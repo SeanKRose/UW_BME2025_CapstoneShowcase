@@ -40,7 +40,7 @@ for filename in sorted(os.listdir(data_folder)):
         with open(output_filename, "w", encoding="utf-8") as f:
             f.write(rendered_html)
 
-        print(f"Generated {output_filename}")
+        # print(f"Generated {output_filename}")
 
         # Determine paths for homepage
         poster_image_path = f"./TeamPosters/{team_data['Team_Number']}.jpg"
@@ -58,10 +58,11 @@ for filename in sorted(os.listdir(data_folder)):
             "Poster": poster_image_path,
             "Page_Link": f"./TeamHTMLFiles/team{int(team_num):02}.html"
         })
+print("Generated All Team HTML Files.")
 
 # Render homepage
 homepage_html = home_template.render(teams=homepage_teams)
 with open("BME2025CapstoneShowcase.html", "w", encoding="utf-8") as f:
     f.write(homepage_html)
 
-print("Generated BME2025CapstoneShowcase.html file")
+print("Generated BME2025CapstoneShowcase.html file.")
