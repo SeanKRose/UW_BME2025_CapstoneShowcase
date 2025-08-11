@@ -29,18 +29,20 @@ body {
 
 .logo-left {
     left: 10%;
+    max-width: 8%;
 }
 
 .logo-right {
     right: 90%;
+    max-width: 8%;
 }
 
-/* Title styling: spans 20%–90% width */
+/* Title styling: spans 20%–80% width */
 .header h1 {
     flex: 1;
     font-family: Georgia, serif;    
     font-size: clamp(2rem, 6vw, 5rem);
-    max-width: 70%; /* between 20%–90% total */
+    max-width: 80%; /* between 10%–90% total */
     color: gold;
     padding: 0.5rem 1rem;
     border-radius: 50px;
