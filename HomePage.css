@@ -1,52 +1,50 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #5D0096;
+    background-color: #5c0096;
     margin: 0;
     padding: 2rem;
     text-align: center;
 }
 
-h1 {
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
-    color: gold;
-    background-color: black;
-}
-
-/* Logos container as a flex row centered with spacing */
-.logo-row {
+/* Flex row for logos + title */
+.header {
     display: flex;
+    align-items: center;
     justify-content: center;
-    gap: 30px;
-    margin-bottom: 20px;
+    background-color: rgba(0,0,0,0.5);
+    gap: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 10px;
 }
 
-/* Logos take max 10% width */
+/* Logos match the title height */
 .logo {
-    width: 10vw;
-    max-width: 80px;
-    height: auto;
+    height: clamp(2rem, 8vw, 6rem);
+    width: auto;
     display: block;
 }
 
+/* Title styling */
 .header h1 {
-    width: 90%;
     font-size: clamp(2rem, 8vw, 6rem); /* min: 2rem, ideal: 8vw, max: 6rem */
-    margin-bottom: 2rem;
     color: gold;
-    background-color: black;
-    padding: 0.5rem 0rem;
+    padding: 0.5rem 1rem;
     border-radius: 10px;
-    display: inline-block;
+    margin: 0;
+    white-space: nowrap;
 }
 
+/* Gallery grid */
 .gallery {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 2rem;
-    padding: 0 2rem;
+    padding: 2rem 2rem;
+    background-color: rgba(0,0,0,0.5);
+    border-radius: 10px;
 }
 
+/* Tile styling */
 .tile {
     background-color: white;
     border-radius: 8px;
@@ -66,13 +64,12 @@ h1 {
     font-weight: bold;
 }
 
-/* Image container to hold both images stacked */
+/* Image container for hover swap */
 .image-container {
     position: relative;
     width: 100%;
 }
 
-/* Both images fill container, stacked */
 .poster-img,
 .prototype-img {
     width: 100%;
@@ -81,12 +78,8 @@ h1 {
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
     transition: opacity 0.3s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
-/* Prototype hidden by default */
 .prototype-img {
     position: absolute;
     top: 0;
@@ -94,7 +87,6 @@ h1 {
     opacity: 0;
 }
 
-/* On hover, fade in prototype and hide poster */
 .tile:hover .prototype-img {
     opacity: 1;
 }
