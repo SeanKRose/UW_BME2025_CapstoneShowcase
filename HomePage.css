@@ -8,6 +8,7 @@ body {
 
 /* Flex row for logos + title */
 .header {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -17,21 +18,35 @@ body {
     border-radius: 25px;
 }
 
-/* Logos match the title height */
+/* Logos fixed at 10% and 90% of page width */
 .logo {
-    height: clamp(2rem, 8vw, 6rem);
-    width: auto;
-    display: block;
+    height: auto;
+    max-height: 6rem;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
-/* Title styling */
+.logo-left {
+    left: 10%;
+}
+
+.logo-right {
+    right: 90%;
+}
+
+/* Title styling: spans 20%–90% width */
 .header h1 {
-    font-size: clamp(2rem, 8vw, 6rem); /* min: 2rem, ideal: 8vw, max: 6rem */
+    flex: 1;
+    font-family: Georgia, serif;    
+    font-size: clamp(2rem, 6vw, 5rem);
+    max-width: 70%; /* between 20%–90% total */
     color: gold;
     padding: 0.5rem 1rem;
     border-radius: 50px;
-    margin: 0;
+    margin: 0 auto;
     white-space: nowrap;
+    text-align: center;
 }
 
 /* Gallery grid */
@@ -48,6 +63,7 @@ body {
 .tile {
     background-color: #5c0096;
     border-radius: 8px;
+    font-family: Verdana, sans-serif;
     text-decoration: none;
     color: black;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
