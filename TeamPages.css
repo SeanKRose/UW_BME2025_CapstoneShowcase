@@ -86,7 +86,7 @@ h1
 }
 
 .prototype-image {
-    max-width: 95vw;      /* maximum 95% of the viewport width */
+    max-width: 80vw;      /* maximum 95% of the viewport width */
     max-height: 75vh;     /* maximum 75% of the viewport height */
     width: auto;
     height: auto;

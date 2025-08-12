@@ -66,8 +66,9 @@ body {
     background-color: #5c0096;
     border-radius: 8px;
     font-family: Verdana, sans-serif;
-    text-decoration: none;
-    color: black;
+    text-decoration: underline;
+    text-decoration-color: rgba(0,0,0,0.5);
+    color: gold;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     transition: transform 0.2s ease;
     overflow: visible; /* Needed for flip */
